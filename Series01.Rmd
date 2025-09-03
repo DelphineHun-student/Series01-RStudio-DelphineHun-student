@@ -61,3 +61,32 @@ What are the main elements of a boxplot?
 Why is a boxplot the starting point of choice in summarizing an unknown distribution?
 * Box plots provide a visual summary of the data with which we can quickly identify the average value of the data, how dispersed the data is, whether the data is skewed or not (skewness).
 
+## Histogram of Weight by Gender
+```{r}
+hist(data$Weight[data$Gender == "F"], #Condition F
+     col = "pink",
+     xlim = range(data$Weight, na.rm = TRUE), 
+     main = "Histogram of Weight by Gender",
+     xlab = "Weight",
+     ylab = "Frequence",
+     ylim = c(0, 2))
+
+hist(data$Weight[data$Gender == "M"], #Condition M
+     col = "blue",
+     add = TRUE)
+
+legend("topright", legend = c("F", "M"),
+       fill = c("pink", "blue"))
+hist(data$Weight, ylim = c(0, 50))
+```
+
+## Boxplot of Weight by Gender
+```{r}
+boxplot(Weight ~ Gender, data = data,
+        main = "Weight Distribution by Gender",
+        xlab = "Gender",
+        ylab = "Weight",
+        col = c("pink", "lightblue"),
+        ylim = c(45,85))
+```
+#Better vizualisation of the dispersion...
