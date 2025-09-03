@@ -34,7 +34,6 @@ hist(data$Weight,
 ```
 # Weight densitogram
 ```{r}
-# Plot density (densitogram) for the 'Weight' column
 plot(density(data$Weight, na.rm = TRUE),
      main = "Weight Densitogram",
      xlab = "Weight",
@@ -50,4 +49,15 @@ boxplot(data$Weight,
         ylab = "Weight",
         col = "orange")
 ```
+## Boxplot section
+# Reference URL > https://www.geeksforgeeks.org/machine-learning/box-plot/
+What are the main elements of a boxplot?
+* Minimum - It is the minimum value in the dataset excluding the outliers.
+* First Quartile (Q1) - 25% of the data lies below the First (lower) Quartile.
+* Median (Q2) - It is the mid-point of the dataset. Half of the values lie below it and half above.
+* Third Quartile (Q3) - 75% of the data lies below the Third (Upper) Quartile.
+* Maximum - It is the maximum value in the dataset excluding the outliers.
+
+Why is a boxplot the starting point of choice in summarizing an unknown distribution?
+* Box plots provide a visual summary of the data with which we can quickly identify the average value of the data, how dispersed the data is, whether the data is skewed or not (skewness).
 
