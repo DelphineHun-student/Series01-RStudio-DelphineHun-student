@@ -89,4 +89,16 @@ boxplot(Weight ~ Gender, data = data,
         col = c("pink", "lightblue"),
         ylim = c(45,85))
 ```
-#Better vizualisation of the dispersion...
+#Better visualization of the dispersion...
+
+## Significant Difference or not ?
+
+#What statistical test is best to answer this question?
+Co pilot anwser :
+* A t-test (specifically, an independent samples t-test) is appropriate to compare the mean weights between two groups (men vs. women). If the data are not normally distributed, use a Wilcoxon rank-sum test.
+
+```{r}
+wilcox.test(Weight ~ Gender, data = data)
+```
+# > No significant
+Since the effect size is large, it suggests that with a larger sample, the difference would likely become statistically significant
