@@ -23,3 +23,13 @@ summary(data)
 ```
 # Explain why the summary is different from one column to the next.
 > Because on one hand there are text columns (like Name/First Name/City...) and on the other hand, there are "numeric" ones (Weight, Height, YearsIn...). It depends on the column type.
+
+## Weight histogram
+```{r}
+hist(data$Weight, 
+     main = "Weight Histogram", 
+     xlab = "Weight",
+     col = "orange", 
+     border = "black")
+```
+
