@@ -3,4 +3,21 @@
 data <- read.csv("data/data_student.csv")
 summary(data)
 ```
+## Tidyverse library
+```{r}
+library(tidyverse)
+```
+
+# Descriptives Statistics
+```{r}
+data %>% # "tibble" = tableau
+  summarise_if(is.numeric, list(
+    mean = mean,
+    sd = sd,
+    median = median,
+    min = min,
+    max = max
+  ), na.rm = TRUE)
+  
+```
 
