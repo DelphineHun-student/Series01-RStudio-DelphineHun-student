@@ -8,7 +8,7 @@ summary(data)
 library(tidyverse)
 ```
 
-# Descriptives Statistics
+# Descriptive Statistics
 ```{r}
 data %>% # "tibble" = tableau
   summarise_if(is.numeric, list(
