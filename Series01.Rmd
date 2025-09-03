@@ -10,14 +10,15 @@ library(tidyverse)
 
 # Descriptive Statistics
 ```{r}
-data %>% # "tibble" = tableau
-  summarise_if(is.numeric, list(
+data %>% # "tibble" = table of data
+  summarise_if(is.numeric, list( #Apply summary functions only if the column is numeric
     mean = mean,
     sd = sd,
     median = median,
+    quantile = quantile,
     min = min,
     max = max
-  ), na.rm = TRUE)
+  ), na.rm = TRUE) # Ignore missing values
   
 ```
 
