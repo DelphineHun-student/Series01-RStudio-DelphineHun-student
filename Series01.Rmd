@@ -42,4 +42,12 @@ plot(density(data$Weight, na.rm = TRUE),
      col = "orange",
      lwd = 2)
 ```
+## Weight Boxplot
+```{r}
+# Boxplot for the 'Weight' column
+boxplot(data$Weight,
+        main = "Weight Boxplot",
+        ylab = "Weight",
+        col = "orange")
+```
 
