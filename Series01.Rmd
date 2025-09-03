@@ -32,4 +32,14 @@ hist(data$Weight,
      col = "orange", 
      border = "black")
 ```
+# Weight densitogram
+```{r}
+# Plot density (densitogram) for the 'Weight' column
+plot(density(data$Weight, na.rm = TRUE),
+     main = "Weight Densitogram",
+     xlab = "Weight",
+     ylab = "Density",
+     col = "orange",
+     lwd = 2)
+```
 
